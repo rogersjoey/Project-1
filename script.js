@@ -13,15 +13,35 @@ let newnumber;
 
 //Buttons
 startButton.addEventListener("click", start());
-greenButton.addEventListener("click", green());
-redButton.addEventListener("click", red());
-yellowButton.addEventListener("click", yellow());
-blueButton.addEventListener("click", blue());
+greenButton.addEventListener("click", ()=>{
+    newNumber = 0;
+    userPattern.push(newNumber);
+    console.log("Green4");
+    test();
+});
+redButton.addEventListener("click", () =>{
+    newNumber = 1;
+    userPattern.push(newNumber);
+    console.log("Red1");
+    test();
+});
+yellowButton.addEventListener("click", () =>{
+    newNumber = 2;
+    userPattern.push(newNumber);
+    console.log("Yellow2");
+    test();
+});
+blueButton.addEventListener("click", () =>{
+    newNumber = 3;
+    userPattern.push(newNumber);
+    console.log("Blue3");
+    test();
+});
 
 
 //Start Logic
-function start(){
-    preventDefault();
+function start(event){
+    //event.preventDefault();
     playback();
 }
 
@@ -31,54 +51,52 @@ function playback(){
     //add random number to array
     let compNumber = Math.floor(Math.random()*3);
     compPattern.push(compNumber);
-    console.log(compPattern)
+    console.log("computer pattern " + compPattern);
     //show pattern on screen
 };
 
 
-
-
 //Select User Test Function
 function test(){
+    //console.log("user pattern " + userPattern);
     let newSpace = userPattern.length - 1;
-    if(userPattern.length === compPattern.length){
+    //console.log(newSpace);
+    if(userPattern.length === compPattern.length && userPattern[newSpace] == compPattern[newSpace]){
         userPattern = [];
-        game();
-    } else if(userPattern[newSpace] != compPattern[newSpace]){
+        playback();
+    } else if(userPattern[newSpace] == compPattern[newSpace]){
         return;
     } else {
-        loser;
+        loser();
     }
 };
 
 
-
-
 //funcion for individual color presses
-function green(){
-    newNumber = 0;
-    userPattern.push(newNumber)
-    console.log("Green")
-    test();
-};
-function red(){
-    newNumber = 1;
-    userPattern.push(newNumber)
-    console.log("Red")
-    test();
-};
-function yellow(){
-    newNumber = 2;
-    userPattern.push(newNumber)
-    console.log("Yellow")
-    test();
-};
-function blue(){
-    newNumber = 3;
-    userPattern.push(newNumber)
-    console.log("Blue")
-    test();
-};
+// function green(){
+//     newNumber = 0;
+//     userPattern.push(newNumber);
+//     console.log("Green");
+//     test();
+// };
+// function red(){
+//     newNumber = 1;
+//     userPattern.push(newNumber);
+//     console.log("Red");
+//     test();
+// };
+// function yellow(){
+//     newNumber = 2;
+//     userPattern.push(newNumber);
+//     console.log("Yellow");
+//     test();
+// };
+// function blue(){
+//     newNumber = 3;
+//     userPattern.push(newNumber);
+//     console.log("Blue");
+//     test();
+// };
 
 
 

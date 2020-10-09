@@ -102,41 +102,13 @@ function test(){
     }
 };
 
-//funcion for individual color presses
-// function green(){
-//     newNumber = 0;
-//     userPattern.push(newNumber);
-//     console.log("Green");
-//     test();
-// };
-// function red(){
-//     newNumber = 1;
-//     userPattern.push(newNumber);
-//     console.log("Red");
-//     test();
-// };
-// function yellow(){
-//     newNumber = 2;
-//     userPattern.push(newNumber);
-//     console.log("Yellow");
-//     test();
-// };
-// function blue(){
-//     newNumber = 3;
-//     userPattern.push(newNumber);
-//     console.log("Blue");
-//     test();
-// };
-
-
 
 
 //Loser Screen Function
 function loser(){
     console.log("loser");
+    greenButton.disable = "true";
 };
-//Select Playback Function
-    //Select User Test Function
-        //funcion for individual color presses
+
 
 

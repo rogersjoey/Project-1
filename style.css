@@ -31,53 +31,57 @@ main {
     box-sizing: border-box;
 }
 
-#backBoard {
+#center{
     background: darkslategray;
-    border-radius: 50%;
-    height: 500px;
-    width: 500px;
-    position: relative;
+    position: absolute;
+    border: black;
     border-style: solid;
     border-width: 10px;
-    margin: auto;
-    margin-top: 60px;
-    box-shadow: 8px 8px 15px 5px #888888;
-    top: 34%
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0px 0px -125px;
+    box-sizing: border-box;
 }
-
-#green{
-    background-color: green;
+.button{
     position: absolute;
     height: 250px;
     width: 250px;
-    border-radius: 250px 0 0 0;
-    top: 185px;
-    right: 50%;
+    border-style: solid;
+    border-width: 5px;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    border-color: black;
 }
-#red{
-    background-color: red;
+#green {
+    background: green;
+    border-radius: 250px 0 0 0;
+    margin: -250px 0px 0px -250px;
+}
+#red {
     position: absolute;
+    background: red;
     height: 250px;
     width: 250px;
     border-radius: 0 250px 0 0;
-    top: 185px;
-    left: 50%;
+    margin: -250px 0px 0px 0px;
 }
-#yellow{
-    background-color: yellow;
+#yellow {
     position: absolute;
+    background: goldenrod;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 0 250px;
+    margin: 0px -250px 0px -250px;
+}
+#blue {
+    position: absolute;
+    background: blue;
     height: 250px;
     width: 250px;
     border-radius: 0 0 250px 0;
-    top: 435px;
-    left: 50%;
-}
-#blue{
-    background-color: blue;
-    position: absolute;
-    height: 250px;
-    width: 250px;
-    border-radius: 0 0 0 250px ;
-    top: 435px;
-    right: 50%;
+    margin: 0px 0px -250px 0px;
 }

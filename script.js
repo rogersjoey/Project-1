@@ -68,6 +68,7 @@ function playback(){
     compPattern.push(compNumber);
     console.log("computer pattern " + compPattern);
     //show pattern on screen
+    levelUp();
     var counter = 0;
     var a = setInterval(function(){
         showPattern(compPattern[counter]);
@@ -150,4 +151,16 @@ function loserColor() {
     }
 };
 
+function levelUp () {
+    if(compPattern.length > 1){
+        move = 750;
+        light = move*.75;
+    } else if (compPattern.length > 4){
+        move = 500;
+        light = move*.75;
+    } else if (compPattern.length > 6){
+        move = 250;
+        light = move*.75;
+    }
+};
 

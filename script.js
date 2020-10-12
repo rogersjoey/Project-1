@@ -16,10 +16,10 @@ let move = 1000;
 let light = move*.75;
 
 //global functions
-function green(){greenButton.style.backgroundColor = "lightgreen";}
-function red(){redButton.style.backgroundColor = "purple";}
-function yellow(){yellowButton.style.backgroundColor = "purple";}
-function blue(){blueButton.style.backgroundColor = "lightblue";}
+function green(){greenButton.style.backgroundColor = "white";}
+function red(){redButton.style.backgroundColor = "white";}
+function yellow(){yellowButton.style.backgroundColor = "white";}
+function blue(){blueButton.style.backgroundColor = "white";}
 function originalColors(){
     greenButton.style.backgroundColor = "";
     redButton.style.backgroundColor = "";
@@ -29,31 +29,49 @@ function originalColors(){
 
 //Buttons
 startButton.addEventListener("click", start);
-greenButton.addEventListener("click", ()=>{
+greenButton.addEventListener("mousedown", ()=>{
+    greenButton.style.backgroundColor = "white";
     newNumber = 0;
     userPattern.push(newNumber);
     test();
 });
-redButton.addEventListener("click", () =>{
+greenButton.addEventListener("mouseup", ()=>{
+    greenButton.style.backgroundColor = "green";
+});
+redButton.addEventListener("mousedown", () =>{
+    redButton.style.backgroundColor = "white";
     newNumber = 1;
     userPattern.push(newNumber);
     test();
 });
-yellowButton.addEventListener("click", () =>{
+redButton.addEventListener("mouseup", () =>{
+    redButton.style.backgroundColor = "red";
+});
+yellowButton.addEventListener("mousedown", () =>{
+    yellowButton.style.backgroundColor = "white";
     newNumber = 2;
     userPattern.push(newNumber);
     test();
 });
-blueButton.addEventListener("click", () =>{
+yellowButton.addEventListener("mouseup", () =>{
+    yellowButton.style.backgroundColor = "yellow";
+});
+blueButton.addEventListener("mousedown", () =>{
+    blueButton.style.backgroundColor = "white";
     newNumber = 3;
     userPattern.push(newNumber);
     test();
+});
+blueButton.addEventListener("mouseup", () =>{
+    blueButton.style.backgroundColor = "blue";
 });
 
 
 //Start Logic
 function start(){
     //event.preventDefault();
+    compPattern = [];
+    userPattern = [];
     document.getElementById("green").disabled = false;
     document.getElementById("red").disabled = false;
     document.getElementById("yellow").disabled = false;

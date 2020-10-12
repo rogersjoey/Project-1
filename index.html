@@ -7,13 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Simon</h1>
-    </header>
     <main>
-        <div id="start-screen">
-            <button id="start">START</button>
-        </div>
+        <h1>Simon</h1>
         <div id="game-screen">
             <button class = "button" id="green"></button>
             <button class = "button" id="red"></button>
@@ -21,6 +16,13 @@
             <button class = "button" id="blue"></button>
         </div>
         <div id="center"></div>
+        <div id="start-screen">
+            <button id="start">START</button>
+            <div class="score-board" id="high-score">High Score:</div>
+            <div class="score-board"id="count">Count:</div>
+            <span id="highScore"></span>
+            <span id="score"></span>
+        </div>
         <div id="lose-screen">
             <!-- <button id="playAgain">PLAY AGAIN</button> -->
         </div>

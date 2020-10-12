@@ -60,29 +60,30 @@ function playback(){
     }, 1000);
 };
 
+
 //showing computer pattern with color changes
-function showPattern(show) {
+async function showPattern(show) {
     console.log(show);
     if(show == 0){
         greenButton.style.backgroundColor = "lightgreen";
         setTimeout(() => {
-           greenButton.style.backgroundColor = "";   
-        }, 1000); 
+            greenButton.style.backgroundColor = "";   
+         }, 750);
     } else if (show == 1){
         redButton.style.backgroundColor = "purple";
         setTimeout(() => {
             redButton.style.backgroundColor = "";
-        }, 1000); 
+        }, 750); 
     } else if (show == 2) {
         yellowButton.style.backgroundColor = "purple";
         setTimeout(() => {
             yellowButton.style.backgroundColor = "";
-        }, 1000);
+        }, 750);
     } else if (show == 3) {
         blueButton.style.backgroundColor = "lightblue";
         setTimeout(() => {
             blueButton.style.backgroundColor = "";
-        }, 1000); 
+        }, 750);
     }
 };
 
@@ -106,9 +107,90 @@ function test(){
 
 //Loser Screen Function
 function loser(){
+    let counter = 0;
+    let a = setInterval(function(){
+        loserColor(compPattern);
+        counter++;
+        if(counter === 4) {
+            clearInterval(a);
+        }
+    }, 250);
     console.log("loser");
     greenButton.disable = "true";
 };
 
-
+function loserColor() {
+    console.log(userPattern);
+    let wrongNumber = (compPattern[userPattern.length-1]);
+    if(wrongNumber == 0){
+        greenButton.style.backgroundColor = "lightgreen";
+        setTimeout(() => {
+           greenButton.style.backgroundColor = "";   
+        }, 450); 
+        setTimeout(() => {
+            greenButton.style.backgroundColor = "lightgreen";   
+        }, 450); 
+        setTimeout(() => {
+        greenButton.style.backgroundColor = "";   
+        }, 450); 
+        setTimeout(() => {
+            greenButton.style.backgroundColor = "lightgreen";   
+        }, 450); 
+        setTimeout(() => {
+        greenButton.style.backgroundColor = "";   
+        }, 450); 
+        
+    } else if (wrongNumber == 1){
+        redButton.style.backgroundColor = "purple";
+        setTimeout(() => {
+            redButton.style.backgroundColor = "";
+        }, 250); 
+        setTimeout(() => {
+            redButton.style.backgroundColor = "purple";
+        }, 250);
+        setTimeout(() => {
+            redButton.style.backgroundColor = "";
+        }, 250); 
+        setTimeout(() => {
+            redButton.style.backgroundColor = "purple";
+        }, 250);
+        setTimeout(() => {
+            redButton.style.backgroundColor = "";
+        }, 250); 
+    } else if (wrongNumber == 2) {
+        yellowButton.style.backgroundColor = "purple";
+        setTimeout(() => {
+            yellowButton.style.backgroundColor = "";
+        }, 250);
+        setTimeout(() => {
+            yellowButton.style.backgroundColor = "purple";
+        }, 250);
+        setTimeout(() => {
+            yellowButton.style.backgroundColor = "";
+        }, 250);
+        setTimeout(() => {
+            yellowButton.style.backgroundColor = "purple";
+        }, 250);
+        setTimeout(() => {
+            yellowButton.style.backgroundColor = "";
+        }, 250);
+    } else if (wrongNumber == 3) {
+        blueButton.style.backgroundColor = "lightblue";
+        setTimeout(() => {
+            blueButton.style.backgroundColor = "";
+        }, 250); 
+        setTimeout(() => {
+            blueButton.style.backgroundColor = "lightblue";
+        }, 250); 
+        setTimeout(() => {
+            blueButton.style.backgroundColor = "";
+        }, 250); 
+        setTimeout(() => {
+            blueButton.style.backgroundColor = "lightblue";
+        }, 250); 
+        setTimeout(() => {
+            blueButton.style.backgroundColor = "";
+        }, 250); 
+    }
+};
 

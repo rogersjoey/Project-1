@@ -6,6 +6,10 @@
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <title>Simon</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <audio id="startSound">
         <source src="sounds/The Price is Right Start Up.mov"></source>
     </audio>
@@ -26,7 +30,7 @@
     </audio>
 </head>
 <body>
-    <main>
+    <main class="animate__animated animate__zoomInUp">
         <div id="game-screen">
             <button class = "button" id="green"></button>
             <button class = "button" id="red"></button>
@@ -43,7 +47,6 @@
             <span class="value" id="score">0</span>
         </div>
         <div id="lose-screen">
-            <!-- <button id="playAgain">PLAY AGAIN</button> -->
         </div>
     </main>
     <script src="script.js"></script>

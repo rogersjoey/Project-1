@@ -12,7 +12,7 @@
 }
 
 body{
-    background-color: silver;
+    background-color: whitesmoke;
 }
 
 main {
@@ -101,9 +101,9 @@ main {
     border-radius: 50%;
     height: 65px;
     width: 125px;
-    top: 52%;
-    left: 51%;
-    margin: -65px 0px 0px -75px;
+    top: 50%;
+    left: 50%;
+    margin: -55px 0px 0px -62.5px;
     box-sizing: border-box;
     outline: none;
 }
@@ -120,6 +120,7 @@ main {
 #high-score{
     top: 50%;
     right: 50%;
+    width: 108px;
     margin: 16px 0px 0px -75px;
 }
 #count{
@@ -156,4 +157,9 @@ main {
     top: 50%;
     left: 50%;
     margin: 17px 0px 0px 10px;
+}
+.animate__animated.animate__zoomInUp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }

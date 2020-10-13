@@ -1,2 +1,23 @@
 # Project-1
 I will be creating a Simon web page game.
+- **Description**
+  - This project is one of the first major projects completed in the General Assembly SEI Course.
+  - The goal of the project was to create an online game with the use of HTML, CSS, and JS.
+  - The game that I chose to create was a Simon memory game challenging players to remember and replay a color coded pattern.
+- **Brief Example**
+  - Once the web page is loaded, to begin the game, the user presses the red "Start" button.
+  - A color code is then generated and played back on the screen beginning with one color
+  - The user is then required to play back the code by selecting buttons in the same order as the computer generated pattern
+  - If the user completes the code correctly then the pattern is extended by a factor of one and played back for the user.
+  - The user continues to try recreate the computer generated code until the they make an incorrect selection and the game is over.
+- **List of Features**
+  - This typically will be a short list of the features / user stories that you planned during the development phase of the project
+  - Some additional features that were added to include:
+    - A pattern level counter
+        - As the player progresses through the challenges and they get long, the count measures how log the patterns are and what "level" the user is on.
+    - Highscore history
+        - the high score records the highest count that the user has recieved to let them try to beat it in the future.
+    - Increased pattern playback speed in future levels
+        - As the patterns continue to get longer, more difficulty is added by increasing the speed that the patterns are played back. Making it more difficult on the user.
+    - Sound Effects
+        - Sound effects are added to the button controls to help give the user feed back on what buttons have been pressed and if they are incorrect in their pattern.

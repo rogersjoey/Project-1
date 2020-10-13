@@ -12,7 +12,7 @@ const turnCounter = document.getElementById("score");
 let compPattern = [];
 let userPattern = [];
 let newnumber;
-let move = 500;
+let move = 600;
 let light = move*.75;
 
 //sounds
@@ -89,6 +89,10 @@ blueButton.addEventListener("mousedown", () =>{
 blueButton.addEventListener("mouseup", () =>{
     blueButton.style.backgroundColor = "blue";
 });
+document.getElementById("green").disabled = true;
+document.getElementById("red").disabled = true;
+document.getElementById("yellow").disabled = true;
+document.getElementById("blue").disabled = true;
 
 
 //Start Logic
@@ -189,13 +193,16 @@ function loserColor() {
 function levelUp () {
     if(compPattern.length > 15){
         move = 200;
-        light = move*.75;
-    } else if (compPattern.length > 10){
+        light = move*.25;
+    } else if (compPattern.length > 15){
         move = 300;
-        light = move*.75;
-    } else if (compPattern.length > 5){
+        light = move*.25;
+    } else if (compPattern.length > 10){
         move = 400;
-        light = move*.75;
+        light = move*.25;
+    } else if (compPattern.length > 5){
+        move = 500;
+        light = move*.25;
     }
     if(compPattern.length <= 10){
         turnCounter.innerHTML = compPattern.length-1;

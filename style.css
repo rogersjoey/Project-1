@@ -1,10 +1,14 @@
-h1 {
-    background-color: Black;
-    color:white;
+.simon {
+    color:silver;
+    font-family: "Orbitron", sans-serif;
+    position: absolute;
     text-align: center;
     margin: 0;
-    padding: 30px 0;
+    padding: 5px 5px;
     box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
+    top: 50%;
+    left: 50%;
+    margin: -100px 0px 0px -61px;
 }
 
 body{
@@ -24,11 +28,12 @@ main {
     height: 60px;
     font-size: 20px;
     padding: 10px;
-    box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 32px -12px black;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 50%;
     box-sizing: border-box;
+    outline: none;
 }
 
 #center{
@@ -98,8 +103,9 @@ main {
     width: 125px;
     top: 52%;
     left: 51%;
-    margin: -75px 0px 0px -75px;
+    margin: -65px 0px 0px -75px;
     box-sizing: border-box;
+    outline: none;
 }
 .score-board{
     background: white;
@@ -114,22 +120,40 @@ main {
 #high-score{
     top: 50%;
     right: 50%;
-    margin: 10px 0px 0px -75px;
+    margin: 16px 0px 0px -75px;
 }
 #count{
     text-align: right;
     top: 50%;
     right: 50%;
     height: 35px;
-    margin: 50px 0px 0px -75px;
+    margin: 60px 0px 0px -75px;
+}
+.value{
+    color: red;
+    font-size: 25px;
+    position: absolute;
+    background: black;
+    height: 34px;
+    width: 50px;
+    border: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10%;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 0px 2px 0px;
+    font-family: "Orbitron", sans-serif;
 }
 #score{
     background: black;
     top: 50%;
     left: 50%;
+    margin: 61px 0px 0px 10px;
 }
-#HighScore{
+#highScore{
     background: black;
     top: 50%;
     left: 50%;
+    margin: 17px 0px 0px 10px;
 }

@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <title>Simon</title>
     <link rel="stylesheet" href="style.css">
+    <audio id="startSound">
+        <source src="sounds/The Price is Right Start Up.mov"></source>
+    </audio>
+    <audio id="greenSound">
+        <source src="sounds/greenSound.mp3"></source>
+    </audio>
+    <audio id="redSound">
+        <source src="sounds/yellowSound.mp3"></source>
+    </audio>
+    <audio id="yellowSound">
+        <source src="sounds/redSound.mp3"></source>
+    </audio>
+    <audio id="blueSound">
+        <source src="sounds/blueSound.mp3"></source>
+    </audio>
+    <audio id="loseSound">
+        <source src="sounds/The Price is Right Losing Horn.mp3"></source>
+    </audio>
 </head>
 <body>
     <main>
-        <h1>Simon</h1>
         <div id="game-screen">
             <button class = "button" id="green"></button>
             <button class = "button" id="red"></button>
@@ -16,12 +34,13 @@
             <button class = "button" id="blue"></button>
         </div>
         <div id="center"></div>
+        <h1 class="simon">SIMON</h1>
         <div id="start-screen">
             <button id="start">START</button>
             <div class="score-board" id="high-score">High Score:</div>
             <div class="score-board"id="count">Count:</div>
-            <span id="highScore"></span>
-            <span id="score"></span>
+            <span class="value" id="highScore">0</span>
+            <span class="value" id="score">0</span>
         </div>
         <div id="lose-screen">
             <!-- <button id="playAgain">PLAY AGAIN</button> -->

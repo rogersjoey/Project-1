@@ -46,7 +46,9 @@ I will be creating a Simon web page game.
 - Start by loading the gameplay web address:   
 - Once the web address is loaded, a gameboard should appear on your screen
 - Begin the game by pressing the red start button
+![Start](README Images/Simon1.png)
 - One of the four buttons will light up with a sound
+![GamePattern](README Images/Simon2.png)
 - Select the same button that was played back for you
 - If the user pattern matches the computer pattern the player continues to the next level
 - If the user pattern does not match the computer pattern then the game is over and the player will need to press the start button again to play a new game.

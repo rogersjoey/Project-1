@@ -183,6 +183,7 @@ function loser(){
         main.classList.remove("animate__animated", "animate__zoomInUp", "animate__slow");
         main.classList.add("animate__animated", "animate__flip");
         startButton.style.backgroundColor = "red";
+        turnCounter.innerHTML = 0;
     }, 2000); 
     loseSound.play();
 };
@@ -214,12 +215,8 @@ function levelUp () {
         move = 500;
         light = move*.5;
     }
-    if(compPattern.length <= 10){
-        turnCounter.innerHTML = compPattern.length-1;
-    } else { turnCounter.innerHTML = compPattern.length-1;}
-    if(highScore.innerHTML <= compPattern.length-1 && compPattern.length < 10){
-        highScore.innerHTML = compPattern.length-1;
-    } else if (highScore.innerHTML <= compPattern.length-1){
+    turnCounter.innerHTML = compPattern.length-1;
+    if (highScore.innerHTML <= compPattern.length-1){
         highScore.innerHTML = compPattern.length-1;
     };
 };

@@ -5,7 +5,7 @@ I will be creating a Simon web page game.
   - The goal of the project was to create an online game with the use of HTML, CSS, and JavaScript.
   - The game that I chose to create was a Simon memory game challenging players to remember and replay a color coded pattern. ![Simon](README_Images/RealSimon.jpg)
 - **Brief Example**
-  ![GamePlay](README_Images/gameplay1.mov)
+  ![GamePlay](README_Images/gameplay1.gif)
   - Once the web page is loaded, to begin the game, the user presses the red "Start" button.
   - A color code is then generated and played back on the screen beginning with one color
   - The user is then required to play back the code by selecting buttons in the same order as the computer generated pattern

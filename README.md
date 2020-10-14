@@ -43,7 +43,7 @@ I will be creating a Simon web page game.
 
 
 **How To Play**
-- Start by loading the gameplay web address:   
+- Start by loading the gameplay web address: "https://vibrant-murdock-e30e5d.netlify.app/"  
 - Once the web address is loaded, a gameboard should appear on your screen
 - Begin the game by pressing the red start button
 ![Start](README_Images/Simon1.png)

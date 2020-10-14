@@ -35,13 +35,14 @@ I will be creating a Simon web page game.
 - JavaScript ES6
   - setInterval and setTimeout Timers
     - To give the user feedback on what patterns they need to press and what buttons they are pressing setIntervals and setTimeout functions were used to give the player extra time to focus on the game screen.
-    - These time intervals were also made variable so that as the levels continue to get harder the speed of the pattern playback increases. 
+    - These time intervals were also made variable so that as the levels continue to get harder the speed of the pattern playback increases. ![Timers](README_Images/setInterval.png)
   - DOM Manipulation
     - With the buttons providing feedback to the user, DOM manipulation in JavaScript was used to connect functions with HTML buttons, classes, and IDs.
-    - This was able to be used to update the styling and allow interaction from the user with the JavaScript code through HTML.
+    - This was able to be used to update the styling and allow interaction from the user with the JavaScript code through HTML.![DOM](README_Images/DOM_Manipulation.png)
 - CSS3
   - Animate CSS Classes
     - Animations provided by "Animate.style" were linked into the HTML file and CSS file to give the user a more interactive experience when using the game.
+  ![Animate](README_Images/Animate.png)
 
 
 **How To Play**

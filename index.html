@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=.75">
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <title>Simon</title>
     <link rel="stylesheet" href="style.css">
@@ -10,9 +10,6 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <audio id="startSound">
-        <source src="sounds/The Price is Right Start Up.mov"></source>
-    </audio>
     <audio id="greenSound">
         <source src="sounds/greenSound.mp3"></source>
     </audio>
@@ -30,7 +27,7 @@
     </audio>
 </head>
 <body>
-    <main class="animate__animated animate__zoomInUp">
+    <main class="animate__animated animate__zoomInUp animate__slow" id="main">
         <div id="game-screen">
             <button class = "button" id="green"></button>
             <button class = "button" id="red"></button>

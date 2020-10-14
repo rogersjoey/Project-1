@@ -1,6 +1,7 @@
 //console.log("connected");
 
 //global variables
+const main = document.getElementById("main");
 const startButton = document.getElementById("start");
 const buttons = document.getElementsByClassName("button");
 const greenButton = document.getElementById("green");
@@ -16,7 +17,6 @@ let move = 600;
 let light = move*.75;
 
 //sounds
-let startSound = document.getElementById("startSound");
 let greenSound = document.getElementById("greenSound");
 let redSound = document.getElementById("redSound");
 let yellowSound = document.getElementById("yellowSound");
@@ -47,58 +47,66 @@ function originalColors(){
     blueButton.style.backgroundColor = "";
 }
 
+//variable button presses based on mobile or desktop screens
+let clickdown = "mousedown";
+let clickup = "mouseup";
+if (typeof window.orientation !== 'undefined') {
+    clickdown = "touchstart";
+    clickup = "touchend";
+}
+
 //Buttons
 startButton.addEventListener("click", start);
-greenButton.addEventListener("mousedown", ()=>{
+greenButton.addEventListener(clickdown, ()=>{
     greenButton.style.backgroundColor = "white";
     greenSound.play();
     newNumber = 0;
     userPattern.push(newNumber);
     test();
 });
-greenButton.addEventListener("mouseup", ()=>{
+greenButton.addEventListener(clickup, ()=>{
     greenButton.style.backgroundColor = "green";
 });
-redButton.addEventListener("mousedown", () =>{
+redButton.addEventListener(clickdown, () =>{
     redButton.style.backgroundColor = "white";
     redSound.play();
     newNumber = 1;
     userPattern.push(newNumber);
     test();
 });
-redButton.addEventListener("mouseup", () =>{
+redButton.addEventListener(clickup, () =>{
     redButton.style.backgroundColor = "red";
 });
-yellowButton.addEventListener("mousedown", () =>{
+yellowButton.addEventListener(clickdown, () =>{
     yellowButton.style.backgroundColor = "white";
     yellowSound.play();
     newNumber = 2;
     userPattern.push(newNumber);
     test();
 });
-yellowButton.addEventListener("mouseup", () =>{
+yellowButton.addEventListener(clickup, () =>{
     yellowButton.style.backgroundColor = "yellow";
 });
-blueButton.addEventListener("mousedown", () =>{
+blueButton.addEventListener(clickdown, () =>{
     blueButton.style.backgroundColor = "white";
     blueSound.play();
     newNumber = 3;
     userPattern.push(newNumber);
     test();
 });
-blueButton.addEventListener("mouseup", () =>{
+blueButton.addEventListener(clickup, () =>{
     blueButton.style.backgroundColor = "blue";
 });
+
 document.getElementById("green").disabled = true;
 document.getElementById("red").disabled = true;
 document.getElementById("yellow").disabled = true;
 document.getElementById("blue").disabled = true;
 
-
 //Start Logic
 function start(){
-    //event.preventDefault();
-    //startSound.play();
+    startButton.style.backgroundColor = "green"
+    main.classList.remove("animate__animated", "animate__flip");
     compPattern = [];
     userPattern = [];
     enable();
@@ -164,17 +172,19 @@ function loser(){
             originalColors(); 
          }, 200); 
         counter++;
-        if(counter === 4) {
+        if(counter === 7) {
             clearInterval(a);
         }
-    }, 250);
+    }, 400);
+    disable();
     setTimeout(() => {
-        originalColors();
         compPattern = [];
         userPattern = [];
-    }, 1000); 
+        main.classList.remove("animate__animated", "animate__zoomInUp", "animate__slow");
+        main.classList.add("animate__animated", "animate__flip");
+        startButton.style.backgroundColor = "red";
+    }, 2000); 
     loseSound.play();
-    disable();
 };
 
 function loserColor() {
@@ -193,16 +203,16 @@ function loserColor() {
 function levelUp () {
     if(compPattern.length > 15){
         move = 200;
-        light = move*.25;
+        light = move*.5;
     } else if (compPattern.length > 15){
         move = 300;
-        light = move*.25;
+        light = move*.5;
     } else if (compPattern.length > 10){
         move = 400;
-        light = move*.25;
+        light = move*.5;
     } else if (compPattern.length > 5){
         move = 500;
-        light = move*.25;
+        light = move*.5;
     }
     if(compPattern.length <= 10){
         turnCounter.innerHTML = compPattern.length-1;
@@ -219,6 +229,7 @@ function disable() {
     document.getElementById("red").disabled = true;
     document.getElementById("yellow").disabled = true;
     document.getElementById("blue").disabled = true;
+    document.getElementById("start").disabled = false;
 };
 
 function enable() {
@@ -226,4 +237,5 @@ function enable() {
     document.getElementById("red").disabled = false;
     document.getElementById("yellow").disabled = false;
     document.getElementById("blue").disabled = false;
+    document.getElementById("start").disabled = true;
 };

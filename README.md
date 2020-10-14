@@ -3,8 +3,9 @@ I will be creating a Simon web page game.
 - **Description**
   - This project is one of the first major projects completed in the General Assembly SEI Course.
   - The goal of the project was to create an online game with the use of HTML, CSS, and JavaScript.
-  - The game that I chose to create was a Simon memory game challenging players to remember and replay a color coded pattern.
+  - The game that I chose to create was a Simon memory game challenging players to remember and replay a color coded pattern. ![Simon](README_Images/RealSimon.jpg)
 - **Brief Example**
+  ![GamePlay](README_Images/gameplay1.mov)
   - Once the web page is loaded, to begin the game, the user presses the red "Start" button.
   - A color code is then generated and played back on the screen beginning with one color
   - The user is then required to play back the code by selecting buttons in the same order as the computer generated pattern
@@ -27,17 +28,18 @@ I will be creating a Simon web page game.
 - mp3 Audio files
   - mp3 audio files were installed in the HTML5 page and used in JavaScript with addEventListerns to buttons.
   - This gave the user improved feedback of button presses and game interations.
+  ![Audio](README_Images/Audio.png)
 - HTML5
   - The structure of the game was set up through HTML5 and laid the ground work of all the parts of the game.
   - Sound files, JavaScript, CSS stylesheets, and animations are all connect through this file.
-- JavaScript
+- JavaScript ES6
   - setInterval and setTimeout Timers
     - To give the user feedback on what patterns they need to press and what buttons they are pressing setIntervals and setTimeout functions were used to give the player extra time to focus on the game screen.
     - These time intervals were also made variable so that as the levels continue to get harder the speed of the pattern playback increases. 
   - DOM Manipulation
     - With the buttons providing feedback to the user, DOM manipulation in JavaScript was used to connect functions with HTML buttons, classes, and IDs.
     - This was able to be used to update the styling and allow interaction from the user with the JavaScript code through HTML.
-- CSS
+- CSS3
   - Animate CSS Classes
     - Animations provided by "Animate.style" were linked into the HTML file and CSS file to give the user a more interactive experience when using the game.
 
